@@ -20,5 +20,5 @@ function staircase(n) {
     }
 }
 
-let n = 4;
+let n = 8;
 staircase(n);
