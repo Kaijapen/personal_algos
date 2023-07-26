@@ -1,25 +1,16 @@
 function diagonalDifference(arr) {
-    let sum1 = 0;
-    let sum2 = 0;
-    let leftP = 0;
-    let rightP = arr[0].length - 1;
-    for(let i = 0; i < arr.length; i++)
-    {
-        console.log(sum1)
-        sum1 += arr[i][leftP];
-        sum2 += arr[i][rightP];
-        leftP++;
-        rightP--;
+    let left = 0;
+    let right = 0;
+    for (let i = 0; i < arr.length; i++) {
+        left += arr[i][i];
+        right += arr[i][arr.length - 1 - i];
     }
-    if (sum1 > sum2)
-    {
-        return sum1 - sum2;
+    let diff = left - right;
+    if (diff < 0) {
+        diff *= -1;
     }
-    else
-    {
-        return sum2 - sum1;
-    }
-    
+    return diff;
+
 }
 
 let arr = [
