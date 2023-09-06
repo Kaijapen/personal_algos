@@ -1,5 +1,5 @@
 // ? example for testing
-const myArray = [4, 7, 8, 9, 12, 56]
+const myArray = [2, 3, 6, 9, 12, 15, 19]
 
 // * Linear Search
 
@@ -14,12 +14,12 @@ function linSearch(elm, low, high, myArr)
     return -1; // ! elm not found
 }
 console.log("Testing for linear search: ")
-console.log(linSearch(10, 0, 5, myArray)) // ? returns -1
-console.log(linSearch(12, 0, 5, myArray)) // ? returns 4
+console.log(linSearch(10, 0, 6, myArray)) // ? returns -1
+console.log(linSearch(12, 0, 6, myArray)) // ? returns 4
 
 function binarySearch(elm, low, high, myArr) {
     while(high >= low) {
-        let mid = Math.floor((low + high) / 2)
+        let mid = Math.floor((low + high) / 2) // ! MUST use Math.floor for calculation because number could be a decimal
         if (myArr[mid] == elm) {
             return mid
         } // ! elm found
@@ -35,6 +35,6 @@ function binarySearch(elm, low, high, myArr) {
     return -1; //! elm not found
 }
 console.log("Testing for binary search: ")
-console.log(binarySearch(10, 0, 5, myArray)) // ? returns -1
-console.log(binarySearch(12, 0, 5, myArray)) // ? returns 4
+console.log(binarySearch(10, 0, 6, myArray)) // ? returns -1
+console.log(binarySearch(12, 0, 6, myArray)) // ? returns 4
 
