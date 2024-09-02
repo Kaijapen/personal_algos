@@ -15,6 +15,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
         for (let j = 0; j < smallestArrLen; j++) {
             if (nums1[i] < nums2[j]) {
                 nums3.push(nums1[i])
+                break;
             } else {
                 nums3.push(nums2[j])
             }
